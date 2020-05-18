@@ -21,6 +21,15 @@ def valid_move?(board, index)
     end
   else
     false
+<<<<<<< HEAD
+=======
+  elsif board[index] == "O"
+    false
+  elsif board[index] == " " || ""
+    true
+  elsif index >= 0 && index <= 8
+    true
+>>>>>>> d60acf01863b90eabb1114ced2dbc9dee3106b72
   end
 end
 
@@ -31,6 +40,7 @@ end
 def turn(board)
   puts "Please enter 1-9:"
   number = gets
+<<<<<<< HEAD
   number = input_to_index number.chomp
   if valid_move? board, number
     move board, number
@@ -38,5 +48,10 @@ def turn(board)
   else
     turn board
 
+=======
+  number = input_to_index(number.chomp)
+  if !valid_move?(board, number)
+    turn(board)
+>>>>>>> d60acf01863b90eabb1114ced2dbc9dee3106b72
   end
 end
